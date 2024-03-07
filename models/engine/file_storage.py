@@ -1,25 +1,39 @@
 #!/usr/bin/python3
-import json
 
+import json
+from ..base_model import BaseModel
+from ..amenity import Amenity
+from ..user import User
+from ..city import City
+from ..state import State
+from ..place import Place
+from ..review import Review
 
 class FileStorage:
     __file_path = "file.json"
-    __object = dict()
+    __objects = {}
 
     def all(self):
-        return FileStorage.__object
+        return self.__objects
 
     def new(self, obj):
-        FileStorage.__object['{}.{}'.format(obj.__class__, obj.__id)] = {}
+        if obj:
+            key = f"{type(obj).__name__}.{obj.id}"
+            self.__objects[key] = obj
 
     def save(self):
-        with open(FileStorage.__file_path, 'w') as f:
-            json.dump(FileStorage.__object, f)
+        dict_of_objects = {}
+
+        for key, value in self.__objects.items():
+            dict_of_objects[key] = value.to_dict()
+        objects_str = json.dumps(dict_of_objects)
+        with open(self.__file_path, "w") as f:
+            f.write(objects_str)
 
     def reload(self):
         try:
-            f = open(FileStorage.__file_path)
+            f = open(self.__file_path)
         except Exception:
             pass
         else:
-            FileStorage.__object = json.load(f)
+            self.__objects = json.load(f)

@@ -2,8 +2,6 @@
 
 import uuid
 from datetime import datetime
-from models import storage
-
 
 class BaseModel:
     def __init__(self, *args, **kwargs):
@@ -16,6 +14,7 @@ class BaseModel:
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
+                    storage.new(self)
 
     def __str__(self):
         return "[{}] ({}) {}".format(self.__class__.__name__,
