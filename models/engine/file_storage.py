@@ -1,13 +1,7 @@
 #!/usr/bin/python3
 
 import json
-from ..base_model import BaseModel
-from ..amenity import Amenity
-from ..user import User
-from ..city import City
-from ..state import State
-from ..place import Place
-from ..review import Review
+from models.base_model import BaseModel
 
 class FileStorage:
     __file_path = "file.json"
@@ -23,7 +17,6 @@ class FileStorage:
 
     def save(self):
         dict_of_objects = {}
-
         for key, value in self.__objects.items():
             dict_of_objects[key] = value.to_dict()
         objects_str = json.dumps(dict_of_objects)
