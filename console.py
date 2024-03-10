@@ -16,6 +16,7 @@ from pprint import pprint
 
 
 def cast(str):
+    """catsts the input string to the its actual data type"""
     if str.isdigit():
         return int(str)
     else:
@@ -33,15 +34,22 @@ class HBNBCommand(cmd.Cmd):
                "State", "City", "Amenity", "Review"]
 
     def do_EOF(self, line):
+        """EOF command to exit the program"""
         return True
 
     def do_quit(self, line):
+        """Quit command to exit the program"""
         return True
 
     def do_clear(self, line):
+        """clears the console"""
         os.system("clear")
 
     def do_create(self, line):
+        """
+        Creates a new instance of BaseModel,
+        saves it and prints the id
+        """
         if not line:
             print("** class name missing **")
         elif line not in self.classes:
@@ -53,6 +61,7 @@ class HBNBCommand(cmd.Cmd):
             print(new.id)
 
     def do_show(self, line):
+        """Prints the string representation of an instance"""
         args = line.split()
         if len(args) == 0:
             print("** class name missing **")
@@ -73,6 +82,7 @@ class HBNBCommand(cmd.Cmd):
                 print(instance_obj)
 
     def do_destroy(self, line):
+        """Deletes an instance based on the class name and id"""
         args = line.split()
         if len(args) == 0:
             print("** class name missing **")
@@ -95,6 +105,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, line):
+        """Prints all string representation of all instances"""
         instances = []
         all_objects = storage.all()
         if not line:
@@ -110,6 +121,7 @@ class HBNBCommand(cmd.Cmd):
         print(instances)
 
     def do_update(self, line):
+        """Updates an instance based on the class name and id"""
         error = 0
         args = line.split()
         if len(args) == 0:
@@ -145,6 +157,7 @@ class HBNBCommand(cmd.Cmd):
             instance.save()
 
     def default(self, line):
+        """default method for the console"""
         syntax_error = f"*** Unknown syntax: {line}"
         args = line.split(".")
         if len(args) == 1:
