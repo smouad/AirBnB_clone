@@ -1,4 +1,5 @@
 ![N|Solid](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240310T135420Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7747110f46f470ed821b025fbae85eae4d15c10ed5ab49e9e60d8ef239109a34)
+
 # 0x00. AirBnB clone - The console
 ___
 In The AirBnB clone project we aims to develop a command-line application that mimics the functionality of the popular online rental marketplace, AirBnB. The project focuses on building a command interpreter in Python to manage various objects within the AirBnB system, such as users, states, cities, and places.
@@ -58,3 +59,4 @@ Here are some examples of how users can interact with the command interpreter:
 (hbnb) show BaseModel 47d4bb6e-7b6d-4505-a055-fabacdc101d1
 ** no instance found **
 ```
+
