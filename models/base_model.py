@@ -24,8 +24,7 @@ class BaseModel:
 
     def __str__(self):
         """returns the string repr of the object"""
-        return "[{}] ({}) {}".format(self.__class__.__name__,
-                                    self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """saves the object to the json filee"""
