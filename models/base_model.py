@@ -6,6 +6,7 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel:
     """ this is the base class for all my classes"""
     def __init__(self, *args, **kwargs):

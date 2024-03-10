@@ -11,6 +11,7 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 
+
 class FileStorage:
     """the FileStorate class that stores our data"""
     __file_path = "file.json"
