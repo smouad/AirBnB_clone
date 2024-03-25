@@ -1,120 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/3-footer.css">
-	<link rel="stylesheet" href="styles/3-header.css">
-	<link rel="stylesheet" href="styles/4-common.css">
-	<link rel="stylesheet" href="styles/6-filters.css">
-	<link rel="stylesheet" href="styles/8-places.css">
-	<link rel="shortcut icon" href="/AirBnB_clone/web_static/images/icon.png" type="image/x-icon">
-	<title>AirBnB Clone</title>
-</head>
-
-<body>
-	<header></header>
-
-	<div class="container">
-		<section class="filters">
-			<div class="locations">
-				<h3>States</h3>
-				<h4>Lagos, Kampala...</h4>
-				<ul class="popover">
-					<li>
-						<h2>Lagos:</h2>
+	<head>
+		<title>AirBnB</title>
+		<meta charset='utf-8'>
+		<link rel="icon" type="image/png" href="images/icon.png">
+		<link rel="stylesheet" type="text/css" href="styles/6-filters.css">
+		<link rel="stylesheet" type="text/css" href="styles/4-common.css">
+		<link rel="stylesheet" type="text/css" href="styles/3-header.css">
+		<link rel="stylesheet" type="text/css" href="styles/3-footer.css">
+		<link rel="stylesheet" type="text/css" href="styles/8-places.css">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+			</div>
+		</header>
+		<div class="container">
+			<section class="filters">
+				<div class="locations">
+					<h3>States</h3>
+					<h4>Rabat-Salé-Kénitra, Marrakech...</h4>
+					<div class="popover">
 						<ul>
-							<li>Yaba</li>
-							<li>Surulere</li>
+							<li><h2>Marrakech-Safi</h2>
+								<ul>
+									<li>Marrakech</li>
+									<li>Safi</li>
+									<li>Youssoufia</li>
+								</ul>
+							</li>
+							<li><h2>Fès-Meknès</h2>
+								<ul>
+									<li>Fès</li>
+									<li>Meknès</li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-					<li>
-						<h2>Kampala:</h2>
+					</div>
+				</div>
+				<div class="amenities">
+					<h3>Amenities</h3>
+					<h4>TV, Internet...</h4>
+					<div class="popover">
 						<ul>
-							<li>Abba</li>
-							<li>Shoki</li>
+							<li>Kitchen</li>
+							<li>Internet</li>
+							<li>TV</li>
+							<li>Iron</li>
 						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="amenities">
-				<h3>Amenities</h3>
-				<h4>Jacuzzi, Kitchen...</h4>
-				<ul class="popover">
-					<li>internet</li>
-					<li>kitchen</li>
-					<li>jacuzzi</li>
-				</ul>
-			</div>
-			<button>Search</button>
-		</section>
-		<section class="places">
-			<h1>places</h1>
-			<div class="places-container">
-				<article>
-					<div>
-						<h2>davy jones' locker</h2>
-						<div class="price_by_night">40</div>
 					</div>
-					<div class="information">
-						<div class="max_guest">2 Guests</div>
-						<div class="number_rooms">1 Bedroom</div>
-						<div class="number_bathrooms">1 Bathroom</div>
-					</div>
-					<div class="user">
-						<b>Owner:</b> Captain Barbosa
-					</div>
-					<div class="description">
-						I'll admit top-tier is subjective. I'm defining the "best developer" as
-						the person I'd love to work with.
-					</div>
-				</article>
-				<article>
-					<div>
-						<h2>narnia</h2>
-						<div class="price_by_night">40</div>
-					</div>
-					<div class="information">
-						<div class="max_guest">2 Guests</div>
-						<div class="number_rooms">1 Bedroom</div>
-						<div class="number_bathrooms">1 Bathroom</div>
-					</div>
-					<div class="user">
-						<b>Owner:</b> Captain Barbosa
-					</div>
-					<div class="description">
-						In reality, there's more to it. What separates top-tier developers from
-						others is complicated. There is a common theme, though: working well
-						with others and communicating.
-					</div>
-				</article>
-				<article>
-					<div>
-						<h2>chocolate factory</h2>
-						<div class="price_by_night">40</div>
-					</div>
-					<div class="information">
-						<div class="max_guest">2 Guests</div>
-						<div class="number_rooms">1 Bedroom</div>
-						<div class="number_bathrooms">1 Bathroom</div>
-					</div>
-					<div class="user">
-						<b>Owner:</b> Captain Barbosa
-					</div>
-					<div class="description">
-						Many people aspire to become the best in their field. Frontend, backend,
-						machine learning, DevOps, whatever it may be. Does that mean having an
-						expert level knowledge of a language or framework? Does that mean
-						architecting systems from the ground up? Sure, that stuff helps.
-					</div>
-				</article>
-			</div>
-		</section>
-	</div>
-
-	<footer>Best School</footer>
-</body>
-
+				</div>
+				<button>
+					Search
+				</button>
+			</section>
+			<section class="places">
+				<h1>Places</h1>
+				<div class="articles">
+					<article>
+						<h2>My home</h2>
+						<div class="price_by_night"><p>$80</p></div>
+						<div class="information">
+							<div class="max_guest"><span>2 Guests</span></div>
+							<div class="number_rooms"><span>1 Bedroom</span></div>
+							<div class="number_bathrooms"><span>1 Bathroom</span></div>
+						</div>
+						<div class="user">
+							<b>Owner:</b> Ismail Boubkri 
+						</div>
+						<div class="description">Experience my stunning, sunlit room complete with an en suite bathroom and shower. Take pleasure in panoramic views of the Bello metropolitan area alongside deluxe amenities. Nestled within a secure, upscale neighborhood, this residence is conveniently situated near picturesque recreational spots, hiking trails, shopping centers, eateries, and universities. Enjoy swift and effortless access to all corners of the metropolitan area.</div>
+					</article>
+					<article>
+						<h2>Tiny house</h2>
+						<div class="price_by_night"><p>$65</p></div>
+						<div class="information">
+							<div class="max_guest"><span>4 Guests</span></div>
+							<div class="number_rooms"><span>2 Bedrooms</span></div>
+							<div class="number_bathrooms"><span>1 Bathroom</span></div>
+						</div>
+						<div class="user">
+							<b>Owner:</b> Ahmad Lgha
+						</div>
+						<div class="description">Nestled in the vibrant center of Medellin, this expansive, airy apartment is enveloped by a plethora of shops, cafés, and restaurants, including our very own downstairs restaurant, 'The Blue Light'! Bathed in natural sunlight, this bedroom features a queen-size bed and access to a shared kitchen and two full bathrooms. With crisp linens, plush down pillows, and a cozy comforter, this accommodation promises an ideal stay.</div>
+					</article>
+					<article>
+						<h2>A suite</h2>
+						<div class="price_by_night"><p>$120</p></div>
+						<div class="information">
+							<div class="max_guest"><span>5 Guests</span></div>
+							<div class="number_rooms"><span>2 Bedrooms</span></div>
+							<div class="number_bathrooms"><span>2 Bathrooms</span></div>
+						</div>
+						<div class="user">
+							<b>Owner:</b> John Cena
+						</div>
+						<div class="description">Experience the tranquil ambiance of a Japanese Tatami room in a serene and secure home nestled within an exclusive area of the city. Impeccably clean and adorned with lush greenery, this space exudes positive energy. Revel in extraordinary sunsets just a 15-minute drive from the airport and within 30 minutes of all major destinations. With the subway only 700 meters away and bus stops just a few blocks distant, transportation is convenient. Plus, enjoy a daily breakfast to start your day off right.</div>
+					</article>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="centered_footer">Best School</div>
+		</footer>
+	</body>
 </html>
